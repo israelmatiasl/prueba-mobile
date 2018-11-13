@@ -1,0 +1,24 @@
+<!-- Generated template for the ComponentsTeamItemComponent component -->
+<ion-card>
+    <ion-card-header>
+        {{team.name}}
+    </ion-card-header>
+    <ion-card-content>
+        <h5><b>Entrenador: </b>{{team.coach}}</h5>
+        <h5><b>Estadio: </b>{{team.stadium}}</h5>
+    </ion-card-content>
+    <ion-row>
+        <ion-col>
+            <button (click)="editTeam(team.$key)" ion-button color="secondary" clear small icon-start>
+            <ion-icon name='md-create'></ion-icon>
+            Editar
+          </button>
+        </ion-col>
+        <ion-col>
+            <button (click)="deleteTeam(team.$key)" ion-button color="danger" clear small icon-start>
+            <ion-icon name='md-trash'></ion-icon>
+            Eliminar
+          </button>
+        </ion-col>
+    </ion-row>
+</ion-card>

@@ -1,0 +1,33 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Team</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <h2>{{text}}</h2>
+
+    <ion-list [formGroup]="teamForm">
+        <ion-item>
+            <ion-label floating>Equipo</ion-label>
+            <ion-input [formControl]="teamForm.controls['name']" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Estadio</ion-label>
+            <ion-input [formControl]="teamForm.controls['stadium']" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Entrenador</ion-label>
+            <ion-input [formControl]="teamForm.controls['coach']" type="text"></ion-input>
+        </ion-item>
+    </ion-list>
+
+
+    <div text-right style="margin-right: 10px; margin-top: 10px;">
+        <button ion-button (click)="saveTeam()">Guardar</button>
+    </div>
+</ion-content>
